@@ -1,5 +1,7 @@
 package com.automatizacion.Controller;
 
+import com.automatizacion.Locators.DoctorSimLocators;
+import com.automatizacion.Model.ConfigManager;
 import com.automatizacion.Model.ExcelManager;
 import com.automatizacion.View.ConsolaView;
 import org.openqa.selenium.*;
@@ -7,13 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import java.time.Duration;
 import java.util.List;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 
 public class BusquedaContactos {
     private ExcelManager excelManager;
@@ -38,18 +35,20 @@ public class BusquedaContactos {
                 String numero = contactos.get(i);
                 vista.mostrarMensaje("🔍 Buscando número: " + numero);
 
-                driver.get("https://www.doctorsim.com/ec-es/recargar-celular/");
-                WebElement input = driver.findElement(By.id("phone"));
+
+                String url = ConfigManager.get("web.url");
+                driver.get(url);
+                WebElement input = driver.findElement(DoctorSimLocators.IMPUT_NUMERO);
                 input.clear();
                 input.sendKeys(numero);
-                driver.findElement(By.id("form-submit")).click();
+                driver.findElement(DoctorSimLocators.BOTON_SIGUIENTE).click();
                 Thread.sleep(4000);
 
                 // Leer operador
                 String operadorResult;
                 try {
 
-                    WebElement operadorElemento =  driver.findElement(By.xpath("//*[@id=\"showSelec\"]/div[2]/div/div/div/div/div/p"));
+                    WebElement operadorElemento =  driver.findElement(DoctorSimLocators.OPERADOR);
                     operadorResult = operadorElemento.getText().trim().toUpperCase();
                     System.out.println("Operador: " + operadorResult);
                 } catch (NoSuchElementException e) {

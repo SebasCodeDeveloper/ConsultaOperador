@@ -1,6 +1,5 @@
 package com.automatizacion.Locators;
 
-import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.openqa.selenium.By;
 
 public class DoctorSimLocators {
