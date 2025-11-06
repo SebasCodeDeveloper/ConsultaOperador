@@ -9,24 +9,18 @@ target/
 *.log
 # Maven
 target/
-
 # IntelliJ IDEA
 .idea/
 *.iml
-
 # Logs
 *.log
-
 # Archivos de sistema Windows
 Thumbs.db
 Desktop.ini
-
 # Temporales
 *.tmp
 ~$*
-
 # Bytecode Java
 *.class
-
 # Respaldo
 *.bak

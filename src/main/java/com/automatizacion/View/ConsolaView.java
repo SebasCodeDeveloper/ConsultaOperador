@@ -9,4 +9,5 @@ public class ConsolaView {
     public void mostrarError(String error) {
         System.err.println("⚠ " + error);
     }
+
 }
