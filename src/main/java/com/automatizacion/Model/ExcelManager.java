@@ -8,6 +8,24 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * DESCRIPCION GENRAL DE LA CLASE:
+ * La clase {@code ExcelManager} sencargada de gestionar la lectura y escritura en el archivo Excel utilizado
+ * en el proceso de automatización.
+
+   ESTA CLASE PERMITE
+ *  Leer una lista de números telefónicos desde una hoja específica.
+ *  Registrar el operador correspondiente a cada número.
+
+   Configuración utilizada:
+ * Números se leen desde la columna C (índice 2).
+ * Operadores se escriben en la columna B (índice 1).
+
+ * @author Jhoan Sebastoian Peña Ordoñez
+ * @version 1.0
+ * @since 06/11/2025
+ * */
+
 public class ExcelManager {
 
 
@@ -49,8 +67,14 @@ public class ExcelManager {
         return contactos;
     }
 
+    /**
+     * Escribe en la hoja el operador detectado para un número.
+     *
+     * @param rutaExcel Ruta del archivo Excel.
+     * @param fila Número de fila en la cual escribir.
+     * @param operador Operador identificado.
+     */
 
-    // ✅ Escribir el operador detectado en la columna B
     public static void escribirOperador(String rutaExcel, int fila, String operador) {
         try (FileInputStream file = new FileInputStream(rutaExcel);
              Workbook workbook = new XSSFWorkbook(file)) {
