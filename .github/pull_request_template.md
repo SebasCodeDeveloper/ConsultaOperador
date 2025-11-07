@@ -1,28 +1,52 @@
 ## 📝 Descripción del cambio
-<!-- Explica brevemente qué hiciste en este PR y por qué -->
+<!-- Explica claramente qué se desarrolló en este PR y cuál fue el objetivo -->
 
-- 
+- Desarrollo de automatización para el flujo: ____________________
+- Se implementaron métodos en las clases: ______________________
+- Se ajustaron localizadores en `locators.properties` (si aplica)
+- Se generaron evidencias en cada paso crítico del proceso
 
 ---
 
 ## ✅ Tipo de cambio
-Marca lo que aplica:
+Selecciona lo que aplica:
 
-- [ ] Nueva funcionalidad (feature)
-- [ ] Corrección de bug (fix)
-- [ ] Refactorización / Mejora del código
-- [ ] Documentación
-- [ ] Configuración / Infraestructura
+- [ ] Nueva automatización (flujo nuevo)
+- [ ] Mejora en flujo existente
+- [ ] Corrección de error en ejecución
+- [ ] Ajuste de localizadores
+- [ ] Documentación / Configuración
+
+---
+
+## 🔄 Archivos / Clases impactadas
+<!-- Lista archivos principales tocados -->
+
+- `ControllerXXXX.java`
+- `PageXXXX.java`
+- `LocatorXXXX.java`
+- `locators.properties`
+- (Otros:) ____________________
+
+---
+
+## 🧪 Validación realizada
+Indica cómo se verificó el cambio:
+
+- [ ] Prueba ejecutada desde IntelliJ
+- [ ] Prueba validada con datos reales de `Excel/TestData`
+- [ ] Flujo completado hasta el final sin errores
+- [ ] Evidencias generadas correctamente
 
 ---
 
 ## ⚠️ Checklist antes de enviar
-Asegúrate de:
-- [ ] El código compila correctamente.
-- [ ] Las pruebas / flujos automáticos se ejecutan correctamente.
-- [ ] Los localizadores están en `locators.properties` (si aplica).
-- [ ] No se quemó data sensible en el código.
-- [ ] Se actualizó documentación si era necesario.
+Confirmar que:
 
+- [ ] No se quemó información sensible ni credenciales.
+- [ ] Se utilizaron `Waits` adecuados para evitar flakiness.
+- [ ] Los localizadores son estables (sin XPaths con índices).
+- [ ] Se registraron mensajes claros en los logs / reportes.
+- [ ] El código mantiene estructura Page Object Model (POM).
 
-
+---
