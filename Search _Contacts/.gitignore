@@ -1,0 +1,27 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Environment-dependent path to Maven home directory
+/mavenHomeManager.xml
+target/
+../.idea/
+*.class
+*.log
+# Maven
+target/
+# IntelliJ IDEA
+.idea/
+*.iml
+# Logs
+*.log
+# Archivos de sistema Windows
+Thumbs.db
+Desktop.ini
+# Temporales
+*.tmp
+~$*
+# Bytecode Java
+*.class
+# Respaldo
+*.bak
+*.xlsx
