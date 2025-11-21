@@ -1,4 +1,3 @@
-
 <h2 align="center">
   <img src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/about_me.gif?raw=true" width="45px" />
   <strong>Consulta de Operador – Automatización</strong>
@@ -98,8 +97,3 @@ El sistema:
 </div> 
 
 ---
-
-
-
-
-
